@@ -23,7 +23,7 @@ RUN dos2unix /src/scripts/docker-package.sh && bash /src/scripts/docker-package.
 RUN cp /src/config.sample.json /src/webapp/config.json
 
 # App
-FROM nginx:alpine
+FROM nginx:1.23.1-alpine
 
 COPY --from=builder /src/webapp /app
 
